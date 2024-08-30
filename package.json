@@ -19,6 +19,7 @@
   "dependencies": {
     "-": "^0.0.1",
     "bcrypt": "^5.1.1",
+    "cloudinary": "^2.4.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "D": "^1.0.0",
@@ -28,6 +29,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.6.0",
     "mongoose-aggregate-paginate-v2": "^1.1.2",
+    "multer": "^1.4.5-lts.1",
     "prettier": "^3.3.3"
   }
 }

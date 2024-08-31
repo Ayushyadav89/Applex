@@ -2,6 +2,7 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 import {ApiError} from "../utils/ApiError.js";
 import {User} from "../models/user.model.js";
 import {uploadOnCloudianry} from "../utils/cloudnary.js";
+import { ApiResponse } from "../utils/ApiResponse.js";
 
 
 const registerUser = asyncHandler( async (req, res) => {
@@ -51,9 +52,26 @@ const registerUser = asyncHandler( async (req, res) => {
         throw new ApiError(400, "Avatar file is required");
     }
 
+    const user = await User.create({
+        fullName,
+        avatar: avatar.url,
+        coverImage: coverImage?.url || "",
+        email,
+        password,
+        username : username.toLowerCase()
+    })
 
-    
+    const createUser = await User.findById(user._id).select(
+        "-password -refreshToken"
+    )
 
+    if(!createUser) {
+        throw new ApiError(500, "Something went wrong while creating an User");
+    }
+
+    return res.status(201).json(
+        new ApiResponse(200, createUser, "User registed Successfully")
+    )
 
 })
 

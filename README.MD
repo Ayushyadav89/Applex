@@ -1,6 +1,7 @@
 # BackEnd Development
 
  To creating a BackEnd Application using JavaScript
+- [Model link](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj) 
 
  <hr>
 
@@ -13,8 +14,9 @@ Project uses all standard practices like JWT, bcrypt, access tokens, refresh Tok
 <hr>
 
 Top Contributer to complete all TODOs
+1. [chai aur code link](https://www.youtube.com/@chaiaurcode)
 
-1. Spiderman (just sample) Link to Repo
+"All thanks to Mr. Hitesh Choudhary for motivating us to complete this backend development course by Code Aur Chai YouTube channel."
 
 <hr>
 
